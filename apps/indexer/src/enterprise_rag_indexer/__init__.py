@@ -1,0 +1,2 @@
+"""Indexer application placeholder."""
+
