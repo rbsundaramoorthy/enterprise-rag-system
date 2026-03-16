@@ -9,3 +9,5 @@ __pycache__/
 htmlcov/
 .DS_Store
 .env
+PROJECT_SPEC.md
+CODEX_TASK_00.md
