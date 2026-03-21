@@ -1,6 +1,6 @@
 PYTHON ?= python3
 
-.PHONY: install lint typecheck test check run-api run-worker
+.PHONY: install lint typecheck test check run-api run-worker migrate seed
 
 install:
 	$(PYTHON) -m pip install -e ".[dev]"
@@ -22,3 +22,8 @@ run-api:
 run-worker:
 	$(PYTHON) -m enterprise_rag_worker
 
+migrate:
+	alembic upgrade head
+
+seed:
+	$(PYTHON) -m app.seed

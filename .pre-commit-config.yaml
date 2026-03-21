@@ -10,12 +10,14 @@ repos:
     hooks:
       - id: mypy
         additional_dependencies:
+          - alembic>=1.14,<2.0
           - fastapi>=0.115,<1.0
+          - PyJWT>=2.10,<3.0
           - pydantic-settings>=2.6,<3.0
+          - sqlalchemy>=2.0.36,<3.0
   - repo: https://github.com/pytest-dev/pytest
     rev: 8.3.4
     hooks:
       - id: pytest
         additional_dependencies:
           - httpx>=0.28,<1.0
-
